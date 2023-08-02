@@ -1,0 +1,23 @@
+.creator-container{
+    width: 15rem;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 8px black;
+    display:flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    background-color: whitesmoke;
+    height:fit-content;
+}
+
+.creator-img{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.creator-tittle{
+    margin: 0.5rem 5%;
+}
+
+.creator-about{
+    margin: 0.5rem;
+}
