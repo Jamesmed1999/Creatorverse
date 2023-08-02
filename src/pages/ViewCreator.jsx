@@ -12,13 +12,13 @@ export const ViewCreator = () => {
   }, []);
 
   async function getCreators() {
-    const { data } = await supabase.from("ctable").select();
+    const { data } = await supabase.from("ctable").select("id");
     setCreators(data);
     setDisplay(true);
   }
   if(display)
   {
-    console.log(creator[0].url)
+    console.log(creator)
 
   }
     return(

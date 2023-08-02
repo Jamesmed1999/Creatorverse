@@ -14,6 +14,7 @@ export default function App() {
 
   async function getCreators() {
     const { data } = await supabase.from("ctable").select();
+    {console.log("Called API")}
     setCreators(data);
   }
 
