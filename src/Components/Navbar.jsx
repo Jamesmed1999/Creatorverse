@@ -14,9 +14,7 @@ return(
             <li>
                 <Link to="/add">Add</Link>
             </li>
-            <li>
-                <Link to="/view">View all</Link>
-            </li>
+       
         </ul>
     </nav>
     </>

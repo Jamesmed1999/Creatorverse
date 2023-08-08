@@ -13,7 +13,7 @@ export default function App() {
   }, []);
 
   async function getCreators() {
-    const { data } = await supabase.from("ctable").select();
+    const { data } = await supabase.from("ctable").select().order('id', { ascending: true });
     {console.log("Called API")}
     setCreators(data);
   }
@@ -21,9 +21,9 @@ export default function App() {
 
   return (
     <div>
-    
+      {console.log(creator)}
       {creator.map((creators) => (
-          <CreatorCard key={creators.id}name={creators.name} description={creators.description} imgLink={creators.imageURL}/>
+          <CreatorCard key={creators.id}name={creators.name} description={creators.description} imgLink={creators.imageURL} url={creators.url} id={creators.id}/>
         ))}
       
       
