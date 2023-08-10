@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate  } from "react-router-dom";
 import  { useState } from 'react';
 import {supabase } from "../client"
 export const AddCreator = () => {
@@ -9,6 +9,7 @@ const [creatorf, setCreatorf] = useState ({
     description:'',
     url:'',
 })
+const navigate = useNavigate();
 
     const handleSubmit= (e)=> {
         
@@ -19,7 +20,9 @@ const [creatorf, setCreatorf] = useState ({
             url: creatorf.url,
         }
         console.log(data.name)
-        addCreator(data)
+        //addCreator(data)
+        alert("Welcosme:" + data.name + " to creatorverse!");
+        navigate("..", { relative: "/" });
     }
     const handleInput= (e)=> {
        
@@ -53,8 +56,8 @@ const [creatorf, setCreatorf] = useState ({
       </div>
       <button type="reset">Reset form</button>
       <button type="submit">Submit form</button>
-    </form>
 
+    </form>
     </div>
     )
 }
