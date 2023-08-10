@@ -26,9 +26,9 @@ root.render(
       <Route path="edit" element={<EditCreator />} />
       <Route path="add" element={<AddCreator />} />
       <Route path="show" element={<ShowCreator />} />
-      <Route path="view" element={<ViewSingle />}>
-      <Route path=":viewId" element={<ViewCreator />} />
-      </Route>
+      <Route path="view/:viewId" element={<ViewCreator />}/>
+      
+    
     </Routes>
   </BrowserRouter>
 );
