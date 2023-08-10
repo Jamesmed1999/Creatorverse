@@ -12,7 +12,7 @@ return(
                 <Link to="/edit">Edit</Link>
             </li>
             <li>
-                <Link to="/add">Add</Link>
+                <Link to="/add">Add a Creator</Link>
             </li>
        
         </ul>
