@@ -16,6 +16,7 @@ export const CreatorCard = ({name, description, imgLink, url, id}) => {
             key={id}
           > <button className="creator-button">View</button>
             </Link>
+            
          
         
         
