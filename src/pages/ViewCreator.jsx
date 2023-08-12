@@ -44,12 +44,17 @@ export const ViewCreator = () => {
 
   
   async function deleteCreator() {
-    /*const { error } = await supabase
+    let answer = window.confirm("Are you Sure you want to Delete?");
+    
+    if (answer === true) {
+    const { error } = await supabase
     .from('ctable')
     .delete()
-    .eq('id', x.id)
-    */
-    navigate("..", { relative: "/edit" });
+    .eq('id', singleCreator.id)
+    console.log("I am here")
+    navigate("..", { relative: "/" });
+    }
+
 }
 
 if(editmode === true)

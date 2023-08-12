@@ -20,9 +20,9 @@ const navigate = useNavigate();
             url: creatorf.url,
         }
         console.log(data.name)
-        //addCreator(data)
+        addCreator(data)
         alert("Welcosme:" + data.name + " to creatorverse!");
-        navigate("..", { relative: "/" });
+        
     }
     const handleInput= (e)=> {
        
@@ -35,7 +35,7 @@ const navigate = useNavigate();
         const { error } = await supabase
         .from('ctable')
         .insert({ name: data.name,description: data.description, imageURL: data.url })
-
+        navigate("..", { relative: "/" });
     }
 
 
