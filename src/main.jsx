@@ -7,10 +7,9 @@ import {
 import App from "./App";
 import { Navbar } from "./Components/Navbar";
 import {AddCreator} from "./pages/AddCreator";
-import {EditCreator} from "./pages/EditCreator";
 import { ShowCreator } from "./pages/ShowCreator";
 import { ViewCreator } from "./pages/ViewCreator";
-import { ViewSingle } from "./pages/ViewSingle";
+
 
 
 const rootElement = document.getElementById("root");
@@ -23,10 +22,12 @@ root.render(
   
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="edit" element={<EditCreator />} />
       <Route path="add" element={<AddCreator />} />
       <Route path="show" element={<ShowCreator />} />
       <Route path="view/:viewId" element={<ViewCreator />}/>
+     
+      
+      
       
     
     </Routes>

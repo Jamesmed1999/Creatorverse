@@ -44,7 +44,7 @@ const navigate = useNavigate();
 <form onSubmit={handleSubmit}>
       <div>
         <label>Name</label>
-        <input type="text" name="name" value={creatorf.name} onChange={handleInput} />
+        <input type="text" name="name" defaultValue={creatorf.name} onChange={handleInput} />
       </div>
       <div>
         <label>About</label>
