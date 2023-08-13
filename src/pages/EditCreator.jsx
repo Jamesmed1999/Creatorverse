@@ -4,7 +4,7 @@ import {supabase } from "../client"
 
 export const EditCreator = ({editmode, setEditMode,singleCreator,setSingleCreator}) => {
     let creatorData = singleCreator;
-
+console.log(creatorData)
     const handleSubmit= (e)=> {
         e.preventDefault();
         addCreator(creatorData)
@@ -24,7 +24,7 @@ export const EditCreator = ({editmode, setEditMode,singleCreator,setSingleCreato
         console.log(data.name + " " + data.description + " " + data.imageURL + data.id)
        const { error } = await supabase
                 .from('ctable')
-                .update({ name: data.name,description: data.description, imageURL: data.imageURL })
+                .update({ name: data.name,description: data.description, imageURL: data.imageURL, Slink: data.slink })
   .             eq('id', data.id) 
   setEditMode(false)
 
@@ -44,6 +44,10 @@ export const EditCreator = ({editmode, setEditMode,singleCreator,setSingleCreato
       <div>
         <label>IMG</label>
         <input type="text" name="url" value={creatorData.url} onChange={handleInput}/>
+      </div>
+      <div>
+        <label>Social Link</label>
+        <input type="text" name="slink" value={creatorData.Slink} onChange={handleInput}/>
       </div>
       <button type="submit">Submit form</button>
     </form>

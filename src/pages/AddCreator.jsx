@@ -8,6 +8,7 @@ const [creatorf, setCreatorf] = useState ({
     name:'',
     description:'',
     url:'',
+    slink:'',
 })
 const navigate = useNavigate();
 
@@ -18,10 +19,11 @@ const navigate = useNavigate();
             name: creatorf.name,
             description: creatorf.description,
             url: creatorf.url,
+            slink: creatorf.slink,
         }
         console.log(data.name)
         addCreator(data)
-        alert("Welcosme:" + data.name + " to creatorverse!");
+        alert("Welcosme: " + data.name + " to creatorverse!");
         
     }
     const handleInput= (e)=> {
@@ -34,7 +36,7 @@ const navigate = useNavigate();
     async function addCreator(data) {
         const { error } = await supabase
         .from('ctable')
-        .insert({ name: data.name,description: data.description, imageURL: data.url })
+        .insert({ name: data.name,description: data.description, imageURL: data.url, Slink: data.slink })
         navigate("..", { relative: "/" });
     }
 
@@ -53,6 +55,10 @@ const navigate = useNavigate();
       <div>
         <label>IMG</label>
         <input type="text" name="url" value={creatorf.url} onChange={handleInput}/>
+      </div>
+      <div>
+        <label>Social Link</label>
+        <input type="text" name="slink" value={creatorf.slink} onChange={handleInput}/>
       </div>
       <button type="reset">Reset form</button>
       <button type="submit">Submit form</button>

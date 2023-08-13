@@ -67,6 +67,7 @@ if(editmode === true)
              <img src={singleCreator.imageURL} alt="creator img" className="creator-img"></img>
         <h1 className="creator-name">{singleCreator.name}</h1>
         <p className="creator-about">{singleCreator.description}</p>
+        <a href={singleCreator.Slink}>Check Me Out!</a>
         
         
     </div>
