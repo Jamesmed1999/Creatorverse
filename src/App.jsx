@@ -22,7 +22,13 @@ export default function App() {
     <div>
       {console.log(creator)}
       {creator.map((creators) => (
-          <CreatorCard key={creators.id}name={creators.name} description={creators.description} imgLink={creators.imageURL} url={creators.url} id={creators.id}/>
+          <CreatorCard key={creators.id}
+          name={creators.name} 
+          description={creators.description} 
+          imgLink={creators.imageURL} 
+          url={creators.url} 
+          id={creators.id}
+          Slink={creators.Slink}/>
         ))}
       
       

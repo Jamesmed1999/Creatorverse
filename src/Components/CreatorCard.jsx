@@ -1,7 +1,7 @@
 import React from "react";
 import "./creator.css"
 import { Link} from "react-router-dom";
-export const CreatorCard = ({name, description, imgLink, url, id}) => {
+export const CreatorCard = ({name, description, imgLink, url, id, Slink}) => {
     
 
 
@@ -9,6 +9,7 @@ export const CreatorCard = ({name, description, imgLink, url, id}) => {
         <img src={imgLink} alt="creator img" className="creator-img"></img>
         <h1 className="creator-name">{name}</h1>
         <p className="creator-about">{description}</p>
+        <a href={Slink}>Check Me Out!</a>
         
         <Link
             style={{ display: "block", margin: "1rem 0" }}
