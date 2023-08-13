@@ -9,9 +9,6 @@ return(
                 <Link to="/">Home</Link>
             </li>
             <li>
-                <Link to="/edit">Edit</Link>
-            </li>
-            <li>
                 <Link to="/add">Add a Creator</Link>
             </li>
        

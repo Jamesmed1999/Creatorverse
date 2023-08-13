@@ -1,64 +1,89 @@
 import React from "react";
-import { useState, useEffect } from 'react';
+import { useState, useEffect , Link} from 'react';
 import {supabase } from "../client"
 import { useParams, useNavigate } from "react-router-dom";
+import { EditCreator } from "./EditCreator";
+
 import '../Components/creator.css'
 
 export const ViewCreator = () => {
 
     const [creator, setCreators] = useState([]);
+    const [singleCreator, setSingleCreator] = useState([]);
+    const [editmode, setEditMode] = useState(false);
+    const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
     let params = useParams();
-    let x,output;
-    const navigate = useNavigate();
+    let output = "loading";
+   
 
     useEffect(() => {
       getCreators();
-    }, []);
-  
+    }, [loading]);
+    const getSingleCreator =  (num) =>
+    {
+      return creator.find(
+        (creator) => creator.url === num
+      );
+    }
     async function getCreators() {
       const { data } = await supabase.from("ctable").select();
-      {console.log("Called API")}
+      {console.log(data + " view")}
       setCreators(data);
-      
+     
+     const dataSingle = getSingleCreator(params.viewId)
+     
+     setSingleCreator(dataSingle)
+     setLoading(false)
+     
     }
-  
- const getIndex =  (num) =>
-  {
-    return creator.find(
-      (creator) => creator.url === num
-    );
+    
+  const toggleEdit = () => {
+    setEditMode(!editmode)
   }
-  x=getIndex(params.viewId);
+
   
   async function deleteCreator() {
-    /*const { error } = await supabase
+    let answer = window.confirm("Are you Sure you want to Delete?");
+    
+    if (answer === true) {
+    const { error } = await supabase
     .from('ctable')
     .delete()
-    .eq('id', x.id)
-    */
-    navigate("..", { relative: "/edit" });
-    //viewID is causing issues so I had to changed the redirect
+    .eq('id', singleCreator.id)
+    console.log("I am here")
+    navigate("..", { relative: "/" });
+    }
 
 }
 
-  if(creator.length === 0){
-    output = "loading"
-  }
-  else{
-    console.log(x.id);
+if(editmode === true)
+{
+  output = <EditCreator editmode={editmode} setEditMode={setEditMode} singleCreator={singleCreator} setSingleCreator={setSingleCreator}/>
+}
+
+ else if(typeof singleCreator !== 'undefined' && loading === false) {
     output = <div className="creator-container">
-             <img src={x.imageURL} alt="creator img" className="creator-img"></img>
-        <h1 className="creator-name">{x.name}</h1>
-        <p className="creator-about">{x.description}</p>
-        <button className="creator-button" onClick={deleteCreator}>Delete creator</button>
+             <img src={singleCreator.imageURL} alt="creator img" className="creator-img"></img>
+        <h1 className="creator-name">{singleCreator.name}</h1>
+        <p className="creator-about">{singleCreator.description}</p>
+        
+        
     </div>
+    
   }
-  
-  
+
+
 
     return(
-        <div>
+        <div >
+          <div className="creator-button-box">
+          <button className="creator-button-edit" onClick={toggleEdit}>Edit</button>
+          <button className="creator-button-delete" onClick={deleteCreator}>Delete creator</button>
+          </div>
             {output}
+            
+
         </div>
         )
 }
