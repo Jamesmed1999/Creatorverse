@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate  } from "react-router-dom";
 import  { useState } from 'react';
 import {supabase } from "../client"
+import "./newcss.css"
 export const AddCreator = () => {
 
 const [creatorf, setCreatorf] = useState ({
@@ -23,7 +24,7 @@ const navigate = useNavigate();
         }
         console.log(data.name)
         addCreator(data)
-        alert("Welcosme: " + data.name + " to creatorverse!");
+        alert("Welcome to the Creatorverse " + data.name + " !");
         
     }
     const handleInput= (e)=> {
@@ -43,27 +44,30 @@ const navigate = useNavigate();
 
     return(
     <div>
+      <article class='grid'>
 <form onSubmit={handleSubmit}>
-      <div>
+  <div>
+
+      
         <label>Name</label>
         <input type="text" name="name" defaultValue={creatorf.name} onChange={handleInput} />
-      </div>
-      <div>
+      
+      
         <label>About</label>
         <input type="text" name="description" value={creatorf.description} onChange={handleInput}/>
-      </div>
-      <div>
+      
+      
         <label>IMG</label>
         <input type="text" name="url" value={creatorf.url} onChange={handleInput}/>
-      </div>
-      <div>
+    
         <label>Social Link</label>
         <input type="text" name="slink" value={creatorf.slink} onChange={handleInput}/>
+     
+      <button type="submit" className="btn-add">Join Now</button>
       </div>
-      <button type="reset">Reset form</button>
-      <button type="submit">Submit form</button>
-
     </form>
+    </article>
     </div>
+  
     )
 }

@@ -19,7 +19,7 @@ export default function App() {
 
 
   return (
-    <div>
+    <div className='main-div'>
       {console.log(creator)}
       {creator.map((creators) => (
           <CreatorCard key={creators.id}

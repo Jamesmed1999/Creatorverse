@@ -9,7 +9,7 @@ import { Navbar } from "./Components/Navbar";
 import {AddCreator} from "./pages/AddCreator";
 import { ShowCreator } from "./pages/ShowCreator";
 import { ViewCreator } from "./pages/ViewCreator";
-
+import '@picocss/pico'
 
 
 const rootElement = document.getElementById("root");
