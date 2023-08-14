@@ -1,0 +1,68 @@
+.btn-add {
+    background-color: green;
+}
+.btn-add:hover {
+    background-color: rgb(121, 230, 121);
+}
+.main-div {
+    display: flex;
+    flex-basis: auto;
+    align-items: center;
+    flex-direction: column;
+    
+    
+    
+}
+.creator-img {
+    width:  500px;
+    height: 500px;
+    object-fit: cover;
+}
+.creator-article {
+    
+    
+    
+}
+.creator-button-edit
+{
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    cursor: pointer;
+    height: 50px;
+    width:150px;
+    text-align: center;
+}
+.creator-button-edit:hover {
+    background-color: rgb(121, 230, 121);
+    text-decoration: underline;
+    
+}
+.creator-button-delete
+{
+    background-color: rgb(255, 13, 0);
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    height: 50px;
+    width:150px;
+    text-align: center;
+}
+.creator-button-delete:hover {
+    background-color: rgb(249, 130, 130);
+    text-decoration: underline;
+}
+.creator-button-box {
+    display: flex;
+    justify-content: center;
+    
+}
+.Load
+{
+    font-size: 100px;
+
+}
+
