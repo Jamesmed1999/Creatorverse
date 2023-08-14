@@ -14,7 +14,7 @@ export const ViewCreator = () => {
     const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
     let params = useParams();
-    let output = "loading";
+    let output = <a href="#" aria-busy="true" className="Load">Loading...</a>
    
 
     useEffect(() => {
@@ -63,13 +63,17 @@ if(editmode === true)
 }
 
  else if(typeof singleCreator !== 'undefined' && loading === false) {
-    output = <div className="creator-container">
-             <img src={singleCreator.imageURL} alt="creator img" className="creator-img"></img>
-        <h1 className="creator-name">{singleCreator.name}</h1>
-        <p className="creator-about">{singleCreator.description}</p>
-        <a href={singleCreator.Slink}>Check Me Out!</a>
+    output = <div >
+      
+      <main class ="container">
+      <article className="creator-article">
+             <center><img src={singleCreator.imageURL} alt="creator img" ></img> 
+             
+        <h1>{singleCreator.name}</h1> </center>
+        <p >{singleCreator.description}</p>
+        <a href={singleCreator.Slink} >Check Me Out!</a></article>
         
-        
+        </main>
     </div>
     
   }
@@ -79,8 +83,8 @@ if(editmode === true)
     return(
         <div >
           <div className="creator-button-box">
-          <button className="creator-button-edit" onClick={toggleEdit}>Edit</button>
-          <button className="creator-button-delete" onClick={deleteCreator}>Delete creator</button>
+          <button className="creator-button-edit" disabled={loading === true} onClick={toggleEdit}>Edit</button>
+          <button className="creator-button-delete" disabled={loading === true} onClick={deleteCreator}>Delete creator</button>
           </div>
             {output}
             
