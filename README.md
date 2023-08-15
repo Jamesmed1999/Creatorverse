@@ -36,7 +36,7 @@ I made a custom logo for the site to add my own personal touch.
 
 Here's a walkthrough of implemented required features:
 
-![Imgur](https://i.imgur.com/5BpU7ng.gifv)
+[Imgur](https://i.imgur.com/5BpU7ng.gifv)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  Adobe Premiere Pro CS6
