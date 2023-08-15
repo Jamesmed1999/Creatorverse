@@ -65,4 +65,10 @@
     font-size: 100px;
 
 }
-
+#logo {
+    forced-color-adjust: none;
+    height: 92px;
+    width: 272px;
+    background-image: url('../../public/logo2.png');
+    margin-top: 15px;
+}

@@ -64,7 +64,10 @@ if(editmode === true)
 
  else if(typeof singleCreator !== 'undefined' && loading === false) {
     output = <div >
-      
+               <div className="creator-button-box">
+          <button className="creator-button-edit" disabled={loading === true} onClick={toggleEdit}>Edit</button>
+          <button className="creator-button-delete" disabled={loading === true} onClick={deleteCreator}>Delete creator</button>
+          </div>
       <main class ="container">
       <article className="creator-article">
              <center><img src={singleCreator.imageURL} alt="creator img" ></img> 
@@ -82,10 +85,6 @@ if(editmode === true)
 
     return(
         <div >
-          <div className="creator-button-box">
-          <button className="creator-button-edit" disabled={loading === true} onClick={toggleEdit}>Edit</button>
-          <button className="creator-button-delete" disabled={loading === true} onClick={deleteCreator}>Delete creator</button>
-          </div>
             {output}
             
 
