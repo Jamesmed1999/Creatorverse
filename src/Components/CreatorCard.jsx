@@ -11,9 +11,9 @@ export const CreatorCard = ({name, description, imgLink, url, id, Slink}) => {
         <article className="creator-article">
         <img src={imgLink} alt="creator img" className="creator-img"></img> 
         <h1 className="creator-name">{name}</h1>
-        <body><p className="creator-about">{description}</p>
+        <p className="creator-about">{description}</p>
         
-        </body>
+        
        
         
         <Link
