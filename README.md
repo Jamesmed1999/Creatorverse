@@ -35,7 +35,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-👉🏿<iframe class="imgur-embed" width="100%" height="720" frameborder="0" src="https://i.imgur.com/5BpU7ng.gifv#embed"></iframe>
+👉🏿![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  Adobe Premiere Pro CS6
