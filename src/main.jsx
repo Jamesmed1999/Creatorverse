@@ -7,7 +7,7 @@ import {
 import App from "./App";
 import { Navbar } from "./Components/Navbar";
 import { ViewCreator } from "./pages/ViewCreator";
-import { ShowCreator } from "./pages/ShowCreator";
+import {AddCreator} from "./pages/AddCreator"
 import '@picocss/pico'
 
 
@@ -20,8 +20,8 @@ root.render(
   <Navbar />
   
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="Show" element={<ShowCreator />} />
+      <Route path="/" element={<App />} /> 
+      <Route path="add" element={<AddCreator />} /> 
       <Route path="view/:viewId" element={<ViewCreator />}/>
     </Routes>
   </BrowserRouter>
