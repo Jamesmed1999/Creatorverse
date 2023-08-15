@@ -29,13 +29,14 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [X] List anything else that you added to improve the site's functionality!
+I made a custom logo for the site to add my own personal touch.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
 
-👉🏿![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+👉🏿![Imgur](https://i.imgur.com/5BpU7ng.gifv)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  Adobe Premiere Pro CS6
