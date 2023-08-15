@@ -46,7 +46,7 @@ GIF created with ...  Adobe Premiere Pro CS6
 
 ## Notes
 
-Most of the issues I ran into where because I was rusty with my react Skills. I had to get up to date with the latest versions of React and React router which took awhile but once I did I felt confident on taking on this project. Using Supabase for the first time was interesting, I had a bit of an issue getting data from it at first. Thankfully they have great documentation so I was able to fix that problem fast. I'm not entirely happy with the CSS which is something I aim to work on but Picocss was surprisingly easy and fun to use. The hardest issue was finding the time to code while trying to juggle two jobs and a job search but I can say I'm proud of the work I did (The secret is coding during your lunch breaks and the bus ride home). I enjoyed this project a lot and I hope to learn more if accepted into this course 
+Most of the issues I ran into where because I was rusty with my react Skills. I had to get up to date with the latest versions of React and React router which took awhile but once I did I felt confident on taking on this project. Using Supabase for the first time was interesting, I had a bit of an issue getting data from it at first. Thankfully they have great documentation so I was able to fix that problem fast. I'm not entirely happy with the CSS which is something I aim to work on but Picocss was surprisingly e asy and fun to use. The hardest issue was finding the time to code while trying to juggle two jobs and a job search but I can say I'm proud of the work I did (The secret is coding during your lunch breaks and the bus ride home). I enjoyed this project a lot and I hope to learn more if accepted into this course 
 
 ## License
 
