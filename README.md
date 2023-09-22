@@ -5,7 +5,7 @@ Build instructions:
     code)
  3. In the terminal run the command "npm run dev"
 
-Demo:
+
 
 ![](https://i.imgur.com/5BpU7ng.gif)
 
