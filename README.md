@@ -7,7 +7,7 @@ Build instructions:
 
 Demo:
 
-![Alt Text](https://i.imgur.com/5BpU7ng.gif)
+![](https://i.imgur.com/5BpU7ng.gif)
 
 ## License
 
